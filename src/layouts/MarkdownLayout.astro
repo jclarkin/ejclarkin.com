@@ -1,0 +1,55 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title || "Evelyn-Jade Clarkin"}>
+  <nav class="back-nav">
+    <a href="/">← Back to Home</a>
+  </nav>
+  <article>
+    <slot />
+  </article>
+</BaseLayout>
+
+<style>
+  .back-nav {
+    margin-bottom: 2rem;
+  }
+
+  .back-nav a {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .back-nav a:hover {
+    color: #fff;
+  }
+
+  article {
+    line-height: 1.6;
+  }
+  
+  article h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  article h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  article h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  article p {
+    margin-bottom: 1rem;
+  }
+</style>
