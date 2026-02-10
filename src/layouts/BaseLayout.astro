@@ -12,6 +12,7 @@ const { title = "E Clarkin" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -48,19 +49,25 @@ const { title = "E Clarkin" } = Astro.props;
     box-sizing: border-box;
   }
 
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
   html {
-    font-family: system-ui, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     background: linear-gradient(135deg, #0f2e1f 0%, #1a3d2e 50%, #0f2e1f 100%);
     background-attachment: fixed;
     min-height: 100vh;
     color: #fff;
     overflow-x: hidden;
     width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   body {
     margin: 0;
-    padding: 2rem;
+    padding: 3rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -79,8 +86,24 @@ const { title = "E Clarkin" } = Astro.props;
   }
   
   h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 600;
+    line-height: 1.4;
   }
   
   img {
@@ -137,7 +160,7 @@ const { title = "E Clarkin" } = Astro.props;
 
   @media (max-width: 768px) {
     body {
-      padding: 1rem;
+      padding: 2rem 1.5rem;
       width: 100%;
     }
 

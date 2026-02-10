@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Music note">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a3d2e" />
+      <stop offset="100%" stop-color="#0f2e1f" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- iOS-style rounded square (22% corner radius like iOS icons) -->
+  <rect x="5" y="5" width="90" height="90" rx="22" ry="22" fill="url(#bg)" filter="url(#shadow)"/>
+
+  <!-- Larger music note symbol -->
+  <!-- Note: glyphs are often "visually" bottom-heavy, so we nudge upward with dy -->
+  <text
+    x="50"
+    y="50"
+    dy="-4"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-size="115"
+    font-weight="700"
+    fill="#b8d4c4"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple Symbols', 'Segoe UI Symbol', 'Noto Sans Symbols 2', sans-serif"
+  >♪</text>
+</svg>
