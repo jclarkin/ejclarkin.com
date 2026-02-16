@@ -113,6 +113,29 @@ const { frontmatter } = Astro.props;
     text-decoration-color: rgba(184, 212, 196, 0.6);
   }
 
+  article :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    margin-bottom: 1.5rem;
+  }
+
+  article :global(table th),
+  article :global(table td) {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+
+  article :global(table th) {
+    color: #e8f5e9;
+    font-weight: 600;
+  }
+
+  article :global(table td) {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
   @keyframes fadeInUp {
     from {
       opacity: 0;

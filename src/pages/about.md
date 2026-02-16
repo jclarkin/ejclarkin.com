@@ -65,7 +65,7 @@ Pursuing a career in music.
 ## Timeline & Learning Plan
 
 | Milestone | Skills & Outcomes |
-|-----------|-------------------|
+|:----------|:-------------------|
 | **Community band** (now) | More music practice; improved verbal communication through coordination and collaboration |
 | **High school diploma** (Spring 2026) | Diploma; organizational skills developed through coursework and deadlines |
 | **Carleton University** (Fall 2026 – 2030) | Bachelor's degree; exposure to professional settings; connections for future work opportunities |
