@@ -5,6 +5,8 @@ title: Skills & Work Samples
 
 # Skills & Work Samples
 
+*Portfolio Item #1 (revised from Lesson 1, Assignment 1)*
+
 ## Horseback Riding Camp Counselor
 
 As a horseback riding camp counselor, I supervised and led daily activities for approximately twelve children, guiding them through both horsemanship and responsibility. I taught campers how to care for horses, practise stable safety, and develop basic riding skills, while also greeting families, outlining daily schedules, and organizing riding and grooming lessons. During lunch hours, I maintained the stables and ensured the horses' health by cleaning, bathing, and monitoring their comfort. Beyond the physical responsibilities, this role taught me how leadership and patience directly impact others' confidence. Watching campers grow comfortable around large animals reinforced the importance of clear instruction and trust, skills that will be essential in future roles involving teamwork, leadership, or education.

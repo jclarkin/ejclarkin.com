@@ -5,6 +5,8 @@ title: About Me
 
 # About Me
 
+*Portfolio Item #2 (Assignment 2 – Personal Profile)*
+
 I am a university-bound student with the goal of pursuing a career in music. I demonstrate dependability, attentiveness, and perseverance in both individual and collaborative academic and musical settings. I am committed to continuous self-improvement, particularly in the area of verbal communication, and I actively challenge myself by participating in my community band, where clear coordination and professionalism are essential. Through these experiences, I continue to develop confidence in contributing within structured group environments. I value honesty and strive to approach my work with integrity, discipline, and a strong sense of responsibility.
 
 ## Skills
@@ -20,6 +22,10 @@ I am a university-bound student with the goal of pursuing a career in music. I d
 - Music
 - Community band participation
 - Academic and musical collaboration
+
+## Learning Style
+
+I like to learn verbally in a structured setting.
 
 ## Values
 
@@ -51,18 +57,16 @@ Pursuing a career in music.
 
 ## Growth Opportunities
 
+- I am committed to dedicating at least 1 hour per week to my learning and skill development.
 - Community band participation (provides opportunities to practice clear coordination and professionalism)
 - University education (upcoming opportunity for further development)
 - Structured group environments (continuing to build confidence and skills)
 
-## Timeline
+## Timeline & Learning Plan
 
-**Currently:**
-- Joining the community band
-- Finishing last year of high school (Spring 2026)
-
-**Fall 2026:**
-- Enrolled in Carleton University for Bachelor's degree (4-year program)
-
-**2030:**
-- Complete degree and pursue full-time self-employment in music field
+| Milestone | Skills & Outcomes |
+|-----------|-------------------|
+| **Community band** (now) | More music practice; improved verbal communication through coordination and collaboration |
+| **High school diploma** (Spring 2026) | Diploma; organizational skills developed through coursework and deadlines |
+| **Carleton University** (Fall 2026 – 2030) | Bachelor's degree; exposure to professional settings; connections for future work opportunities |
+| **2030 onward** | Pursue full-time self-employment in music field |
