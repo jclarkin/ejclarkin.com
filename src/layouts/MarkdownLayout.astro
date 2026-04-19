@@ -100,17 +100,21 @@ const { frontmatter } = Astro.props;
     font-weight: 600;
   }
 
-  article a {
-    color: #b8d4c4;
+  article :global(a) {
+    color: #8ee0b4;
     text-decoration: underline;
-    text-decoration-color: rgba(184, 212, 196, 0.3);
+    text-decoration-color: rgba(142, 224, 180, 0.5);
     text-underline-offset: 3px;
     transition: all 0.2s ease;
   }
 
-  article a:hover {
+  article :global(a:hover) {
     color: #fff;
-    text-decoration-color: rgba(184, 212, 196, 0.6);
+    text-decoration-color: rgba(255, 255, 255, 0.8);
+  }
+
+  article :global(a:visited) {
+    color: #8ee0b4;
   }
 
   article :global(table) {
