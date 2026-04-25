@@ -56,15 +56,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .nav-links {
     list-style: none;
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.25rem;
-    max-width: 900px;
+    max-width: 1120px;
     margin: 0 auto;
   }
 
   .nav-links li {
     margin: 0;
+    flex: 1 1 200px;
+    max-width: 240px;
+    min-width: 200px;
   }
 
   .nav-links a {
@@ -137,18 +141,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
 
     .nav-links {
-      grid-template-columns: 1fr;
       gap: 1rem;
+    }
+
+    .nav-links li {
+      flex: 1 1 100%;
+      max-width: none;
     }
 
     .nav-links a {
       padding: 1.25rem 1.5rem;
-    }
-  }
-
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .nav-links {
-      grid-template-columns: repeat(2, 1fr);
     }
   }
 </style>

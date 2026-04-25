@@ -1,0 +1,1821 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const docs = {
+  coverLetter: {
+    title: 'Cover Letter - NAC Orchestra',
+    tag: 'Portfolio Item #7 · Lesson 17',
+    href: '/portfolio/cover-letter-nac-orchestra.pdf',
+    thumb: '/portfolio/thumbs/cover-letter-nac-orchestra.jpg',
+    size: '33 KB',
+    description:
+      "One-page letter to the NAC Orchestra Personnel Manager and Audition Committee. Connects my community-band experience, iLead leadership training, and bilingual (English/French) communication skills to the responsibilities of a section player.",
+  },
+  resume: {
+    title: 'Clarinet Résumé',
+    tag: 'Portfolio Item #6 · Lesson 17',
+    href: '/portfolio/evelyn-jade-clarkin-clarinet-resume.pdf',
+    thumb: '/portfolio/thumbs/evelyn-jade-clarkin-clarinet-resume.jpg',
+    size: '261 KB',
+    description:
+      'Combination-style résumé highlighting clarinet performance, ensemble experience, leadership, and academics. Tailored with keywords from the NAC Orchestra audition posting.',
+  },
+  destination: {
+    title: 'Becoming a Section Clarinetist - NAC Orchestra',
+    tag: 'Portfolio Item #4 · Lesson 16',
+    href: '/portfolio/destination-profile-section-clarinetist.pdf',
+    thumb: '/portfolio/thumbs/destination-profile-section-clarinetist.jpg',
+    size: '4.3 MB',
+    description:
+      'Destination Profile research presentation. Answers five of the nine assignment prompts (skills, education, LMI, trends, related jobs) with MLA-cited sources and a supporting graphic.',
+  },
+  occupationMatching: {
+    title: 'Essential Skills Occupation Matching Report',
+    tag: 'Careers Section · Lesson 12',
+    href: '/portfolio/occupation-matching-report.pdf',
+    thumb: '/portfolio/thumbs/occupation-matching-report.jpg',
+    size: '108 KB',
+    description:
+      'Subject and occupation matching report connecting Music Class to ten possible careers, including orchestra musician, band musician, music teacher, and other creative or community-focused roles.',
+  },
+  teamwork: {
+    title: 'Teamwork Self-Assessment & Improvement Plan',
+    tag: 'Portfolio Item #3 · Lesson 7',
+    href: '/portfolio/teamwork-questionnaire.pdf',
+    thumb: '/portfolio/thumbs/teamwork-questionnaire.jpg',
+    size: '520 KB',
+    description:
+      '40-question self-assessment identifying my primary roles (Thinker + Carer, Leader as backup) plus three skills to actively improve (Use Numbers, Communicate, Work With Others), each paired with a concrete method.',
+  },
+};
+
+const awardsGallery = [
+  {
+    title: 'Most Effort',
+    detail: 'Russell High School · June 2023',
+    full: '/portfolio/awards/01-2023-06-most-effort.jpg',
+    thumb: '/portfolio/awards/thumbs/01-2023-06-most-effort.jpg',
+  },
+  {
+    title: 'Academic Achievement — Art',
+    detail: 'Russell High School · June 20, 2023',
+    full: '/portfolio/awards/02-2023-06-academic-achievement-art.jpg',
+    thumb: '/portfolio/awards/thumbs/02-2023-06-academic-achievement-art.jpg',
+  },
+  {
+    title: 'Academic Achievement — Language',
+    detail: 'Russell High School · June 20, 2023',
+    full: '/portfolio/awards/03-2023-06-academic-achievement-language.jpg',
+    thumb: '/portfolio/awards/thumbs/03-2023-06-academic-achievement-language.jpg',
+  },
+  {
+    title: 'Intermediate Program Completion',
+    detail: 'Upper Canada DSB · June 22, 2023',
+    full: '/portfolio/awards/04-2023-06-intermediate-program-completion.jpg',
+    thumb: '/portfolio/awards/thumbs/04-2023-06-intermediate-program-completion.jpg',
+  },
+  {
+    title: 'Conceptual Clarity Award',
+    detail: 'RHS Arts Department · June 4, 2024',
+    full: '/portfolio/awards/05-2024-06-conceptual-clarity-arts.jpg',
+    thumb: '/portfolio/awards/thumbs/05-2024-06-conceptual-clarity-arts.jpg',
+  },
+  {
+    title: 'Outstanding Achievement — Grade 9 Music',
+    detail: 'AMU2O · 2023–2024 Sem 2',
+    full: '/portfolio/awards/06-2024-06-outstanding-achievement-music-grade-9.jpg',
+    thumb: '/portfolio/awards/thumbs/06-2024-06-outstanding-achievement-music-grade-9.jpg',
+  },
+  {
+    title: 'Highest Average — Gr. 11 Foundations for College Math',
+    detail: 'Russell High School · 2025–2026 Sem 1',
+    full: '/portfolio/awards/07-2026-01-highest-average-math-grade-11.jpg',
+    thumb: '/portfolio/awards/thumbs/07-2026-01-highest-average-math-grade-11.jpg',
+  },
+  {
+    title: 'Highest Average — Gr. 12 Music',
+    detail: 'Russell High School · 2025–2026 Sem 1',
+    full: '/portfolio/awards/08-2026-01-highest-average-music-grade-12.jpg',
+    thumb: '/portfolio/awards/thumbs/08-2026-01-highest-average-music-grade-12.jpg',
+  },
+];
+
+const timeline = [
+  { when: 'Now', what: 'Russell Public HS', detail: 'Grade 12, band & community band', state: 'current' },
+  { when: 'June 2026', what: 'OSSD', detail: 'Ontario Secondary School Diploma', state: 'upcoming' },
+  { when: '2026–2030', what: 'Carleton University', detail: 'Bachelor of Music · Entrance Scholarship', state: 'upcoming' },
+  { when: '2030 →', what: 'Audition Track', detail: 'Post-grad professional ensemble auditions', state: 'future' },
+  { when: 'Goal', what: 'NAC Orchestra', detail: 'Section Clarinetist', state: 'goal' },
+];
+
+const performanceStats = [
+  { value: '12', label: 'documented performances' },
+  { value: '4', label: 'performance settings' },
+  { value: '2022–2026', label: 'years represented' },
+];
+
+const performanceGroups = [
+  {
+    group: 'Russell Community Concert Band',
+    short: 'RCCB',
+    events: [
+      { date: 'Mar. 19, 2026', title: 'Catch the Ace performance' },
+      { date: 'May 14, 2026', title: 'RCCB performance', status: 'Upcoming' },
+    ],
+  },
+  {
+    group: 'Russell High School',
+    short: 'RHS',
+    events: [
+      { date: 'Dec. 2023', title: 'RHS band performance' },
+      { date: 'June 2024', title: 'RHS band performance' },
+      { date: 'Dec. 2024', title: 'RHS band performance' },
+      { date: 'Dec. 2025', title: 'RHS band performance' },
+      { date: 'May 2026', title: 'Music Festival performance', status: 'Upcoming' },
+    ],
+  },
+  {
+    group: 'Santa Parade',
+    short: 'Community',
+    events: [
+      { date: 'Nov. 2022', title: 'Santa Parade performance' },
+      { date: 'Nov. 2023', title: 'Santa Parade performance' },
+    ],
+  },
+  {
+    group: 'Remembrance Day',
+    short: 'Ceremony',
+    events: [
+      { date: 'Nov. 11, 2023', title: 'Remembrance Day RHS performance' },
+      { date: 'Nov. 11, 2024', title: 'Remembrance Day RHS performance' },
+      { date: 'Nov. 11, 2025', title: 'Remembrance Day RHS performance' },
+    ],
+  },
+];
+
+const itemMap = [
+  { n: 1, title: 'Skills & Work Samples (revised)', src: 'Lesson 5', where: '/skills-work-samples/', status: 'done' },
+  { n: 2, title: 'Personal Profile', src: 'Lesson 5', where: '/about/', status: 'done' },
+  { n: 3, title: 'Teamwork Skills Summative', src: 'Lesson 7', where: '#skills', status: 'done' },
+  { n: 4, title: 'Destination Profile', src: 'Lesson 16', where: '#careers', status: 'done' },
+  { n: 5, title: 'Job Ad (target)', src: 'Lesson 17', where: '#resume', status: 'done' },
+  { n: 6, title: 'Tailored Résumé', src: 'Lesson 17', where: '#resume', status: 'done' },
+  { n: 7, title: 'Cover Letter', src: 'Lesson 17', where: '#resume', status: 'done' },
+  { n: 8, title: 'Music Performances (Teamwork)', src: 'External · Item C', where: '#skills', status: 'done' },
+  { n: 9, title: 'Awards & Recognition (Employability)', src: 'External · Item D', where: '#skills', status: 'done' },
+];
+---
+
+<BaseLayout title="Career Portfolio - Evelyn-Jade Clarkin">
+  <a href="/" class="home-link">← Back to Home</a>
+
+  <section class="hero">
+    <div class="hero-text">
+      <div class="eyebrow">Designing Your Future (GWL3O) · Lesson 20 Culminating Task</div>
+      <h1>Career Portfolio</h1>
+      <p class="lede">
+        A living collection of evidence that shows who I am as a worker and where I am headed. It pulls together the seven mandatory items from this course plus additional documents that demonstrate I am a strong fit for my chosen career as a professional clarinetist.
+      </p>
+      <div class="destination-card">
+        <div class="destination-label">Target career destination</div>
+        <div class="destination-main">Section Clarinetist · NAC Orchestra</div>
+        <div class="destination-sub">via Bachelor of Music, Carleton University (2026–2030)</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 120 600" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="clarinet" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#0a1e14" />
+            <stop offset="40%" stop-color="#1a3d2e" />
+            <stop offset="50%" stop-color="#2a5a44" />
+            <stop offset="60%" stop-color="#1a3d2e" />
+            <stop offset="100%" stop-color="#0a1e14" />
+          </linearGradient>
+          <linearGradient id="key" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#d4c896" />
+            <stop offset="100%" stop-color="#8a7a3a" />
+          </linearGradient>
+        </defs>
+        <!-- Mouthpiece -->
+        <path d="M55 10 L65 10 L68 38 L52 38 Z" fill="url(#clarinet)" />
+        <!-- Ligature -->
+        <rect x="50" y="38" width="20" height="8" fill="#c9b56a" />
+        <!-- Barrel -->
+        <rect x="48" y="46" width="24" height="28" rx="3" fill="url(#clarinet)" />
+        <!-- Upper joint -->
+        <rect x="48" y="74" width="24" height="190" rx="2" fill="url(#clarinet)" />
+        <!-- Lower joint -->
+        <rect x="48" y="264" width="24" height="210" rx="2" fill="url(#clarinet)" />
+        <!-- Bell -->
+        <path d="M48 474 L72 474 L90 560 L30 560 Z" fill="url(#clarinet)" />
+        <!-- Keys on the right side -->
+        <circle cx="76" cy="95" r="4" fill="url(#key)" />
+        <circle cx="76" cy="120" r="4" fill="url(#key)" />
+        <circle cx="76" cy="145" r="4" fill="url(#key)" />
+        <circle cx="76" cy="170" r="4" fill="url(#key)" />
+        <circle cx="76" cy="195" r="4" fill="url(#key)" />
+        <circle cx="76" cy="230" r="4" fill="url(#key)" />
+        <rect x="74" y="275" width="6" height="18" rx="2" fill="url(#key)" />
+        <circle cx="76" cy="310" r="4" fill="url(#key)" />
+        <circle cx="76" cy="335" r="4" fill="url(#key)" />
+        <circle cx="76" cy="360" r="4" fill="url(#key)" />
+        <circle cx="76" cy="395" r="4" fill="url(#key)" />
+        <circle cx="76" cy="430" r="4" fill="url(#key)" />
+        <!-- Tone holes on left -->
+        <circle cx="44" cy="110" r="2.5" fill="#061410" />
+        <circle cx="44" cy="140" r="2.5" fill="#061410" />
+        <circle cx="44" cy="170" r="2.5" fill="#061410" />
+        <circle cx="44" cy="295" r="2.5" fill="#061410" />
+        <circle cx="44" cy="325" r="2.5" fill="#061410" />
+        <circle cx="44" cy="355" r="2.5" fill="#061410" />
+      </svg>
+    </div>
+  </section>
+
+  <div class="layout">
+    <aside class="toc" aria-label="Page sections">
+      <div class="toc-inner">
+        <div class="toc-heading">On this page</div>
+        <ol>
+          <li><a href="#resume"><span class="toc-num">01</span><span>Résumé</span></a></li>
+          <li><a href="#skills"><span class="toc-num">02</span><span>Skills</span></a></li>
+          <li><a href="#careers"><span class="toc-num">03</span><span>Careers</span></a></li>
+          <li><a href="#reflection"><span class="toc-num">04</span><span>Reflection</span></a></li>
+          <li><a href="#item-map"><span class="toc-num">05</span><span>Item Map</span></a></li>
+        </ol>
+      </div>
+    </aside>
+
+    <main class="portfolio-body">
+      <section id="resume" class="section">
+        <header class="section-header">
+          <div class="section-num-lg">01</div>
+          <div>
+            <h2>Résumé Section</h2>
+            <p class="section-sub">Tailored specifically to the NAC Orchestra Section Clarinetist audition posting.</p>
+          </div>
+        </header>
+
+        <div class="doc-card">
+          <a class="thumb" href={docs.coverLetter.href} aria-label={`Open ${docs.coverLetter.title}`}>
+            <img src={docs.coverLetter.thumb} alt="" loading="lazy" />
+          </a>
+          <div class="doc-body">
+            <div class="doc-tag">{docs.coverLetter.tag}</div>
+            <h3>{docs.coverLetter.title}</h3>
+            <p>{docs.coverLetter.description}</p>
+            <a class="btn" href={docs.coverLetter.href}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              View PDF · {docs.coverLetter.size}
+            </a>
+          </div>
+        </div>
+
+        <div class="doc-card">
+          <a class="thumb" href={docs.resume.href} aria-label={`Open ${docs.resume.title}`}>
+            <img src={docs.resume.thumb} alt="" loading="lazy" />
+          </a>
+          <div class="doc-body">
+            <div class="doc-tag">{docs.resume.tag}</div>
+            <h3>{docs.resume.title}</h3>
+            <p>{docs.resume.description}</p>
+            <a class="btn" href={docs.resume.href}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              View PDF · {docs.resume.size}
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <header class="section-header">
+          <div class="section-num-lg">02</div>
+          <div>
+            <h2>Skills Section</h2>
+            <p class="section-sub">Four documents proving the skills employers care about. Per the course rule, at least one comes from outside this course.</p>
+          </div>
+        </header>
+
+        <div class="skill-card">
+          <div class="skill-head">
+            <span class="chip chip-done">Ready</span>
+            <span class="skill-kind">Essential Learning Skills</span>
+          </div>
+          <div class="doc-card">
+            <a class="thumb" href={docs.destination.href} aria-label={`Open ${docs.destination.title}`}>
+              <img src={docs.destination.thumb} alt="" loading="lazy" />
+            </a>
+            <div class="doc-body">
+              <div class="doc-tag">{docs.destination.tag}</div>
+              <h3>Destination Profile - Becoming a Section Clarinetist</h3>
+              <p>{docs.destination.description}</p>
+              <a class="btn" href={docs.destination.href}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                View PDF · {docs.destination.size}
+              </a>
+            </div>
+          </div>
+          <blockquote class="reflection">
+            <span class="reflection-label">What this proves</span>
+            I chose to include my career research presentation because it shows my learning skills and how I can find and organize information about a job I'm interested in. It's also a good example of communication since I had to present that info so it made sense to other people. This kind of focus and being able to stick to a plan are employability skills that I use to get my work done.
+          </blockquote>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-head">
+            <span class="chip chip-done">Ready</span>
+            <span class="skill-kind">Communication Skills</span>
+          </div>
+          <div class="doc-card">
+            <a class="thumb" href={docs.teamwork.href} aria-label={`Open ${docs.teamwork.title}`}>
+              <img src={docs.teamwork.thumb} alt="" loading="lazy" />
+            </a>
+            <div class="doc-body">
+              <div class="doc-tag">{docs.teamwork.tag}</div>
+              <h3>{docs.teamwork.title}</h3>
+              <p>40-question self-assessment identifying my primary roles (Thinker + Carer, Leader as backup) plus three skills to actively improve (<em>Use Numbers</em>, <em>Communicate</em>, <em>Work With Others</em>), each paired with a concrete method. A short summary also lives on the <a href="/skills-work-samples/">Skills & Work Samples</a> page.</p>
+              <a class="btn" href={docs.teamwork.href}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                View PDF · {docs.teamwork.size}
+              </a>
+            </div>
+          </div>
+          <blockquote class="reflection">
+            <span class="reflection-label">What this proves</span>
+            I have chosen to include my teamwork style questionnaire because it demonstrates my communication skills, specifically my ability to listen before contributing to a group. My results identified me as a mix of a Thinker and Carer, which shows that I communicate by weighing alternatives and ensuring everyone in the group feels heard. Instead of just pushing my own opinions, I focus on fostering good working relationships and improving upon the ideas of others. These skills in active listening and conflict resolution are essential employability traits that allow me to communicate effectively and keep a team working harmoniously toward a common goal.
+          </blockquote>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-head">
+            <span class="chip chip-done">Ready</span>
+            <span class="skill-kind">Teamwork Skills</span>
+            <span class="chip chip-outside">Outside-of-course</span>
+          </div>
+          <div class="performance-infographic" aria-label="Music performance history infographic">
+            <div class="performance-intro">
+              <div>
+                <h3>Music Performance History</h3>
+                <p>A visual record of school, community band, parade, and ceremony performances that show reliability, rehearsal habits, and teamwork in real ensemble settings.</p>
+              </div>
+              <div class="performance-badge" aria-hidden="true">
+                <span>2022</span>
+                <strong>to</strong>
+                <span>2026</span>
+              </div>
+            </div>
+            <div class="performance-stats">
+              {performanceStats.map((stat) => (
+                <div class="performance-stat">
+                  <strong>{stat.value}</strong>
+                  <span>{stat.label}</span>
+                </div>
+              ))}
+            </div>
+            <div class="performance-groups">
+              {performanceGroups.map((group) => (
+                <article class="performance-group">
+                  <div class="performance-group-head">
+                    <div>
+                      <h4>{group.group}</h4>
+                      <span>{group.events.length} {group.events.length === 1 ? 'performance' : 'performances'}</span>
+                    </div>
+                    <div class="performance-short">{group.short}</div>
+                  </div>
+                  <ol class="performance-events">
+                    {group.events.map((event) => (
+                      <li>
+                        <time>{event.date}</time>
+                        <span>{event.title}</span>
+                        {event.status && <em>{event.status}</em>}
+                      </li>
+                    ))}
+                  </ol>
+                </article>
+              ))}
+            </div>
+          </div>
+          <blockquote class="reflection">
+            <span class="reflection-label">What this proves</span>
+            I chose to include my history of band performances because it is a good example of my teamwork skills and how I can contribute to a group goal. Playing in both school and community band has taught me how to collaborate with all kinds of people, where everyone has to listen to each other and stay in sync to sound good. This experience shows that I am accountable and reliable because if I don't know my part, it affects the whole section and the overall sound of the music. Being able to follow a conductor's lead and support the other musicians are important skills that I use when I need to work effectively as part of a team.
+          </blockquote>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-head">
+            <span class="chip chip-done">Ready</span>
+            <span class="skill-kind">Employability Skills</span>
+            <span class="chip chip-outside">Outside-of-course</span>
+          </div>
+          <div class="award-intro">
+            <h3>Awards & Recognition</h3>
+            <p>A chronological gallery of awards earned outside of this course — evidence of dependability, initiative, and sustained effort across academics, the arts, and music. Click any certificate to view it full-size.</p>
+          </div>
+          <div class="award-carousel" data-carousel>
+            <button type="button" class="carousel-btn carousel-prev" data-carousel-prev aria-label="Previous award" disabled>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <ul class="award-gallery" role="list" data-carousel-track>
+              {awardsGallery.map((award, i) => (
+                <li class="award-card">
+                  <a
+                    href={award.full}
+                    data-lightbox-trigger
+                    data-index={i}
+                    data-full={award.full}
+                    data-title={award.title}
+                    data-detail={award.detail}
+                    aria-label={`View ${award.title} certificate full-size`}
+                  >
+                    <div class="award-thumb">
+                      <img src={award.thumb} alt={`${award.title} certificate`} loading="lazy" />
+                    </div>
+                    <div class="award-meta">
+                      <div class="award-title">{award.title}</div>
+                      <div class="award-detail">{award.detail}</div>
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <button type="button" class="carousel-btn carousel-next" data-carousel-next aria-label="Next award">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <blockquote class="reflection">
+            <span class="reflection-label">What this proves</span>
+            I included these awards from Russell High School because they show my commitment to excellence and my ability to succeed in many different areas. Winning awards for Language, Art, and "Conceptual Clarity" demonstrates that I have strong communication and creative skills, while my "Most Effort" award proves that I'm a hard worker who stays dedicated to a project until it's finished. My more recent awards for the highest average in Grade 11 Math and Grade 12 Music show organization as I move into more advanced classes. These are all important employability skills because they prove that I can be counted on to do high-quality work and keep improving, no matter the task.
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="careers" class="section">
+        <header class="section-header">
+          <div class="section-num-lg">03</div>
+          <div>
+            <h2>Careers Section</h2>
+            <p class="section-sub">Occupations of interest plus the education and training route from high school to the NAC Orchestra.</p>
+          </div>
+        </header>
+
+        <ol class="timeline" aria-label="Career path">
+          {timeline.map((stop) => (
+            <li class={`timeline-stop state-${stop.state}`}>
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-body">
+                <div class="timeline-when">{stop.when}</div>
+                <div class="timeline-what">{stop.what}</div>
+                <div class="timeline-detail">{stop.detail}</div>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <div class="doc-card">
+          <a class="thumb" href={docs.occupationMatching.href} aria-label={`Open ${docs.occupationMatching.title}`}>
+            <img src={docs.occupationMatching.thumb} alt="" loading="lazy" />
+          </a>
+          <div class="doc-body">
+            <div class="doc-tag">{docs.occupationMatching.tag}</div>
+            <h3>A. Document Communicating Occupations of Interest</h3>
+            <p>{docs.occupationMatching.description}</p>
+            <a class="btn" href={docs.occupationMatching.href}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              View PDF · {docs.occupationMatching.size}
+            </a>
+          </div>
+        </div>
+
+        <div class="doc-card">
+          <a class="thumb" href={docs.destination.href} aria-label={`Open ${docs.destination.title}`}>
+            <img src={docs.destination.thumb} alt="" loading="lazy" />
+          </a>
+          <div class="doc-body">
+            <div class="doc-tag">{docs.destination.tag}</div>
+            <h3>B. Education / Training Plan to Meet Career Goals</h3>
+            <p>The same research presentation also serves as the formal Education and Training plan for this portfolio. A condensed, web-friendly version of the plan lives on the <a href="/about/">About Me</a> page.</p>
+            <a class="btn" href={docs.destination.href}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              View PDF · {docs.destination.size}
+            </a>
+          </div>
+        </div>
+
+        <div class="related-pages">
+          <h4>Related course pages</h4>
+          <ul>
+            <li><a href="/skills-work-samples/">Skills & Work Samples - Lesson 1 / Item #1 (revised)</a></li>
+            <li><a href="/about/">About Me / Personal Profile - Lesson 5 / Item #2</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="reflection" class="section">
+        <header class="section-header">
+          <div class="section-num-lg">04</div>
+          <div>
+            <h2>Reflection</h2>
+            <p class="section-sub">A final reflection on what this portfolio proves and how the course changed my understanding of my skills.</p>
+          </div>
+        </header>
+
+        <div class="final-reflection">
+          <p>Building my portfolio taught me that many different experiences contribute to my skills, even if it isn't obvious at first. For example, I used to think I was bad at communication because I can be quite shy, but I realized that I don't have to be an extrovert to be good at communication; as long as I put in the effort to understand a concept and can share it clearly with others, I am using communication skills. This experience also made me aware of how many steps are actually required to get a job and just how many different types of skills exist in the workforce. I used to think I lacked a lot of necessary traits, but now I realize I have more skills than I thought, and improving on my weaker areas isn't impossible. It has showed me that I don't have to be perfect at everything immediately, as long as I am willing to put in the effort to get better.</p>
+          <p>My portfolio communicates three important things about me: that I am a hard worker who persists even when things are difficult, that I am a good listener who can collaborate to achieve a common goal, and that I am always willing to learn because I truly care about my work. The best part of my portfolio is how my prior achievements prove I have real experience working with others in a team. However, one area that could use improvement is my leadership, as I tend to be more comfortable working on the sidelines. While I know being a supportive team member is a skill of its own, I want to get better at taking charge when the situation requires it.</p>
+        </div>
+      </section>
+
+      <section id="item-map" class="section">
+        <header class="section-header">
+          <div class="section-num-lg">05</div>
+          <div>
+            <h2>Portfolio Item Map</h2>
+            <p class="section-sub">Lesson 20 checklist - every required item and where it lives.</p>
+          </div>
+        </header>
+
+        <div class="item-map">
+          {itemMap.map((item) => (
+            <a href={item.where} class={`item-card item-${item.status}`}>
+              <div class="item-num">#{item.n}</div>
+              <div class="item-title">{item.title}</div>
+              <div class="item-src">{item.src}</div>
+              <div class="item-status">{item.status === 'done' ? '✓ Placed' : '⋯ To add'}</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+    <button type="button" class="lightbox-close" data-lightbox-close aria-label="Close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button type="button" class="lightbox-nav lightbox-prev" data-lightbox-prev aria-label="Previous">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button type="button" class="lightbox-nav lightbox-next" data-lightbox-next aria-label="Next">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-img" data-lightbox-img alt="" />
+      <figcaption class="lightbox-caption">
+        <span class="lightbox-counter" data-lightbox-counter></span>
+        <span class="lightbox-title" id="lightbox-title" data-lightbox-title></span>
+        <span class="lightbox-detail" data-lightbox-detail></span>
+      </figcaption>
+    </figure>
+  </div>
+</BaseLayout>
+
+<style>
+  :root {
+    --accent: #8ee0b4;
+    --accent-soft: rgba(142, 224, 180, 0.15);
+    --accent-border: rgba(142, 224, 180, 0.28);
+    --surface: rgba(26, 61, 46, 0.35);
+    --surface-hi: rgba(26, 61, 46, 0.55);
+    --surface-border: rgba(184, 212, 196, 0.18);
+    --amber: #e6c567;
+    --rose: #e89a9a;
+    --ink: rgba(255, 255, 255, 0.92);
+    --ink-soft: rgba(255, 255, 255, 0.7);
+    --ink-mute: rgba(255, 255, 255, 0.55);
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1.5rem;
+  }
+
+  .home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(26, 61, 46, 0.2);
+    border: 1px solid rgba(184, 212, 196, 0.15);
+    transition: all 0.2s ease;
+    margin-bottom: 2rem;
+  }
+  .home-link:hover {
+    color: #fff;
+    background: rgba(26, 61, 46, 0.45);
+    border-color: var(--accent-border);
+    transform: translateX(-3px);
+  }
+
+  /* ── Hero ─────────────────────────────────────────────── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    background:
+      radial-gradient(circle at 90% 20%, rgba(142, 224, 180, 0.12) 0%, transparent 45%),
+      linear-gradient(135deg, rgba(26, 61, 46, 0.6) 0%, rgba(15, 46, 31, 0.85) 100%);
+    border: 1px solid var(--surface-border);
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-art {
+    display: none;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    background: linear-gradient(135deg, #ffffff 0%, #b8d4c4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .lede {
+    font-size: 1.1rem;
+    color: var(--ink);
+    line-height: 1.7;
+    margin: 0 0 1.5rem 0;
+    max-width: 56ch;
+  }
+  .destination-card {
+    display: inline-block;
+    padding: 1rem 1.4rem;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-border);
+    border-radius: 14px;
+  }
+  .destination-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  .destination-main {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.2rem;
+  }
+  .destination-sub {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  @media (min-width: 720px) {
+    .hero {
+      grid-template-columns: 1fr 140px;
+      align-items: center;
+    }
+    .hero-art {
+      display: block;
+      height: 360px;
+      justify-self: end;
+      opacity: 0.9;
+      filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));
+    }
+    .hero-art svg {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  /* ── Layout with sticky TOC ───────────────────────────── */
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .toc {
+    display: none;
+  }
+  @media (min-width: 960px) {
+    .layout {
+      grid-template-columns: 260px 1fr;
+      gap: 3.5rem;
+    }
+    .toc {
+      display: block;
+      align-self: start;
+    }
+  }
+  .toc-inner {
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+  }
+  @media (min-width: 960px) {
+    .toc-inner {
+      width: 260px;
+      max-height: calc(100vh - 3rem);
+      overflow: auto;
+      z-index: 30;
+    }
+    .toc-inner.is-fixed {
+      position: fixed;
+      top: 1.5rem;
+      left: max(2rem, calc((100vw - 1200px) / 2 + 2rem));
+    }
+  }
+  .toc-heading {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.85rem;
+  }
+  .toc ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .toc li a {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 0.55rem 0.6rem;
+    border-radius: 8px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.15s ease;
+    border-left: 2px solid transparent;
+  }
+  .toc li a:hover {
+    color: #fff;
+    background: rgba(142, 224, 180, 0.08);
+    border-left-color: var(--accent);
+  }
+  .toc-num {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    opacity: 0.7;
+  }
+
+  /* ── Sections ─────────────────────────────────────────── */
+  .portfolio-body {
+    min-width: 0;
+  }
+  .section {
+    margin-bottom: 4rem;
+    scroll-margin-top: 1.5rem;
+  }
+  .section-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--surface-border);
+  }
+  .section-num-lg {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    opacity: 0.6;
+  }
+  .section-header h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+    margin: 0 0 0.4rem 0;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+  .section-sub {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  /* ── Document card ────────────────────────────────────── */
+  .doc-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 16px;
+    margin-bottom: 1.25rem;
+    transition: all 0.25s ease;
+  }
+  .doc-card:hover {
+    background: var(--surface-hi);
+    border-color: var(--accent-border);
+    transform: translateY(-2px);
+  }
+  @media (min-width: 620px) {
+    .doc-card {
+      grid-template-columns: 150px 1fr;
+      gap: 1.5rem;
+    }
+  }
+  .thumb {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    background: #f5f2e8;
+    border: 1px solid var(--surface-border);
+    transition: all 0.25s ease;
+  }
+  .thumb:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .thumb-contain img {
+    object-fit: contain;
+    padding: 0.5rem;
+  }
+  .thumb-link-only {
+    background: var(--accent-soft);
+  }
+  .thumb-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--accent);
+  }
+  .thumb-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent);
+  }
+  .doc-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .doc-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  .doc-body h3 {
+    margin: 0 0 0.55rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .doc-body p {
+    margin: 0 0 1rem 0;
+    color: var(--ink);
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: flex-start;
+    padding: 0.6rem 1rem;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-border);
+    border-radius: 10px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  .btn:hover {
+    background: rgba(142, 224, 180, 0.25);
+    border-color: var(--accent);
+    color: #fff;
+  }
+
+  /* ── Skill card (wraps doc + reflection) ─────────────── */
+  .skill-card {
+    margin-bottom: 1.75rem;
+  }
+  .skill-head {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .skill-kind {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.01em;
+  }
+  .chip {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .chip-done {
+    background: rgba(142, 224, 180, 0.2);
+    color: var(--accent);
+    border: 1px solid var(--accent-border);
+  }
+  .chip-todo {
+    background: rgba(230, 197, 103, 0.15);
+    color: var(--amber);
+    border: 1px solid rgba(230, 197, 103, 0.35);
+  }
+  .chip-outside {
+    background: rgba(184, 212, 196, 0.1);
+    color: var(--ink-soft);
+    border: 1px solid var(--surface-border);
+  }
+  .reflection {
+    margin: 0.9rem 0 0 0;
+    padding: 1rem 1.2rem;
+    background: rgba(142, 224, 180, 0.07);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    color: var(--ink);
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+  .reflection-label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  .skill-card-todo .todo-body {
+    padding: 1.25rem 1.5rem;
+    background: rgba(230, 197, 103, 0.06);
+    border: 1px dashed rgba(230, 197, 103, 0.3);
+    border-radius: 12px;
+  }
+  .todo-body p {
+    margin: 0 0 0.6rem 0;
+    color: var(--ink);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .todo-body p:last-child {
+    margin-bottom: 0;
+  }
+  .todo-reflection {
+    color: var(--ink-soft) !important;
+  }
+
+  /* ── Performance infographic ──────────────────────────── */
+  .performance-infographic {
+    padding: 1.25rem;
+    border: 1px solid var(--surface-border);
+    border-radius: 16px;
+    background:
+      radial-gradient(circle at top right, rgba(142, 224, 180, 0.12), transparent 34%),
+      linear-gradient(135deg, rgba(26, 61, 46, 0.5), rgba(10, 30, 20, 0.35));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+  .performance-intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .performance-intro h3 {
+    margin: 0 0 0.4rem 0;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 650;
+  }
+  .performance-intro p {
+    margin: 0;
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 0.98rem;
+  }
+  .performance-badge {
+    justify-self: start;
+    min-width: 132px;
+    padding: 0.85rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--accent-border);
+    background: rgba(142, 224, 180, 0.08);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+  }
+  .performance-badge span {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .performance-badge strong {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-mute);
+  }
+  .performance-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.1rem;
+  }
+  .performance-stat {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--surface-border);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.035);
+  }
+  .performance-stat strong {
+    display: block;
+    color: var(--accent);
+    font-size: 1.45rem;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .performance-stat span {
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+  }
+  .performance-groups {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+  .performance-group {
+    border: 1px solid var(--surface-border);
+    border-radius: 14px;
+    background: rgba(10, 30, 20, 0.36);
+    overflow: hidden;
+  }
+  .performance-group-head {
+    padding: 0.95rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    border-bottom: 1px solid var(--surface-border);
+  }
+  .performance-group-head h4 {
+    margin: 0 0 0.18rem 0;
+    color: #fff;
+    font-size: 0.98rem;
+  }
+  .performance-group-head span {
+    color: var(--ink-mute);
+    font-size: 0.78rem;
+  }
+  .performance-short {
+    flex: 0 0 auto;
+    padding: 0.4rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(230, 197, 103, 0.12);
+    border: 1px solid rgba(230, 197, 103, 0.25);
+    color: var(--amber);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .performance-events {
+    list-style: none;
+    margin: 0;
+    padding: 0.35rem 0;
+  }
+  .performance-events li {
+    display: grid;
+    grid-template-columns: minmax(96px, 0.55fr) 1fr;
+    gap: 0.65rem;
+    align-items: center;
+    padding: 0.65rem 1rem;
+    position: relative;
+  }
+  .performance-events li + li {
+    border-top: 1px solid rgba(184, 212, 196, 0.1);
+  }
+  .performance-events time {
+    color: var(--accent);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .performance-events span {
+    color: var(--ink);
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+  .performance-events em {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: -0.2rem;
+    padding: 0.16rem 0.45rem;
+    border-radius: 999px;
+    background: rgba(142, 224, 180, 0.12);
+    color: var(--accent);
+    border: 1px solid var(--accent-border);
+    font-size: 0.68rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 640px) {
+    .performance-intro {
+      grid-template-columns: 1fr auto;
+    }
+    .performance-badge {
+      justify-self: end;
+    }
+    .performance-stats {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (min-width: 860px) {
+    .performance-groups {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* ── Awards gallery ───────────────────────────────────── */
+  .award-intro {
+    margin-bottom: 1.25rem;
+  }
+  .award-intro h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .award-intro p {
+    margin: 0;
+    color: var(--ink);
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+  .award-carousel {
+    position: relative;
+    margin: 0 0 1rem 0;
+    isolation: isolate;
+  }
+  .award-gallery {
+    list-style: none;
+    padding: 0.25rem 3rem 1rem 3rem;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 3rem;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-border) transparent;
+  }
+  .award-gallery::-webkit-scrollbar {
+    height: 8px;
+  }
+  .award-gallery::-webkit-scrollbar-thumb {
+    background: var(--accent-border);
+    border-radius: 4px;
+  }
+  .award-gallery::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .award-card {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+  }
+  @media (min-width: 640px) {
+    .award-card {
+      flex: 0 0 280px;
+    }
+  }
+  .award-card a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--ink);
+    transition: all 0.25s ease;
+  }
+  .carousel-btn {
+    position: absolute;
+    top: calc(50% - 1rem);
+    transform: translateY(-50%);
+    z-index: 20;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(10, 30, 20, 0.85);
+    border: 1px solid var(--accent-border);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+  }
+  .carousel-btn:hover:not(:disabled) {
+    background: rgba(26, 61, 46, 0.95);
+    transform: translateY(-50%) scale(1.08);
+  }
+  .carousel-btn:disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .carousel-btn:focus-visible {
+    outline: 2px solid #8ee0b4;
+    outline-offset: 2px;
+  }
+  .carousel-prev {
+    left: 0.75rem;
+  }
+  .carousel-next {
+    right: 0.75rem;
+  }
+  @media (min-width: 720px) {
+    .carousel-prev {
+      left: 1rem;
+    }
+    .carousel-next {
+      right: 1rem;
+    }
+  }
+  .award-card a:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-border);
+    background: var(--surface-hi);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  }
+  .award-thumb {
+    aspect-ratio: 4 / 3;
+    background: #f5f2e8;
+    overflow: hidden;
+  }
+  .award-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .award-card a:hover .award-thumb img {
+    transform: scale(1.04);
+  }
+  .award-meta {
+    padding: 0.85rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex: 1;
+  }
+  .award-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.35;
+  }
+  .award-detail {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.02em;
+  }
+  /* ── Lightbox ─────────────────────────────────────────── */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(5, 18, 12, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .lightbox[hidden] {
+    display: none;
+  }
+  .lightbox.is-open {
+    opacity: 1;
+  }
+  .lightbox-figure {
+    margin: 0;
+    max-width: min(1200px, 95vw);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  .lightbox-img {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #f5f2e8;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  }
+  .lightbox-caption {
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    max-width: 700px;
+  }
+  .lightbox-counter {
+    font-size: 0.78rem;
+    color: var(--ink-mute);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .lightbox-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  .lightbox-detail {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  .lightbox-close,
+  .lightbox-nav {
+    position: absolute;
+    background: rgba(10, 30, 20, 0.7);
+    border: 1px solid var(--accent-border);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  .lightbox-close:hover,
+  .lightbox-nav:hover {
+    background: rgba(26, 61, 46, 0.95);
+    transform: scale(1.08);
+  }
+  .lightbox-close:focus-visible,
+  .lightbox-nav:focus-visible {
+    outline: 2px solid #8ee0b4;
+    outline-offset: 2px;
+  }
+  .lightbox-close {
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+  }
+  .lightbox-nav {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+  }
+  .lightbox-nav:hover {
+    transform: translateY(-50%) scale(1.08);
+  }
+  .lightbox-prev {
+    left: 1rem;
+  }
+  .lightbox-next {
+    right: 1rem;
+  }
+  @media (min-width: 768px) {
+    .lightbox-prev {
+      left: 2rem;
+    }
+    .lightbox-next {
+      right: 2rem;
+    }
+  }
+  body.lightbox-open {
+    overflow: hidden;
+  }
+
+  /* ── Timeline ─────────────────────────────────────────── */
+  .timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.25rem 0;
+    display: grid;
+    gap: 0;
+    position: relative;
+  }
+  .timeline-stop {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    position: relative;
+  }
+  .timeline-stop::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-border), var(--surface-border));
+  }
+  .timeline-stop:first-child::before {
+    top: 50%;
+  }
+  .timeline-stop:last-child::before {
+    bottom: 50%;
+  }
+  .timeline-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 2px solid var(--accent);
+    margin: 0.85rem auto 0 auto;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 4px rgba(15, 46, 31, 0.9);
+  }
+  .state-current .timeline-dot {
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(15, 46, 31, 0.9), 0 0 16px rgba(142, 224, 180, 0.6);
+  }
+  .state-goal .timeline-dot {
+    background: var(--amber);
+    border-color: var(--amber);
+    box-shadow: 0 0 0 4px rgba(15, 46, 31, 0.9), 0 0 16px rgba(230, 197, 103, 0.6);
+  }
+  .timeline-body {
+    padding: 0.5rem 1rem 0.75rem 0.25rem;
+  }
+  .timeline-when {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+  .state-goal .timeline-when {
+    color: var(--amber);
+  }
+  .timeline-what {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.15rem;
+  }
+  .timeline-detail {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+
+  @media (min-width: 720px) {
+    .timeline {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      margin-top: 1rem;
+    }
+    .timeline-stop {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding: 0.25rem 0.5rem;
+    }
+    .timeline-stop::before {
+      left: 0;
+      right: 0;
+      top: 50px;
+      bottom: auto;
+      width: auto;
+      height: 2px;
+      background: linear-gradient(to right, var(--accent-border), var(--surface-border));
+    }
+    .timeline-stop:first-child::before {
+      left: 50%;
+      top: 50px;
+    }
+    .timeline-stop:last-child::before {
+      right: 50%;
+      top: 50px;
+    }
+    .timeline-dot {
+      margin: 0.5rem auto;
+    }
+    .timeline-body {
+      padding: 0.4rem 0.2rem;
+    }
+  }
+
+  /* ── Related pages ────────────────────────────────────── */
+  .related-pages {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 12px;
+  }
+  .related-pages h4 {
+    margin: 0 0 0.6rem 0;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .related-pages ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .related-pages a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.15s ease;
+  }
+  .related-pages a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  /* ── Final reflection ─────────────────────────────────── */
+  .final-reflection {
+    padding: clamp(1.25rem, 3vw, 2rem);
+    background:
+      radial-gradient(circle at top left, rgba(142, 224, 180, 0.12), transparent 34%),
+      var(--surface);
+    border: 1px solid var(--surface-border);
+    border-left: 4px solid var(--accent);
+    border-radius: 16px;
+    color: var(--ink);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+  }
+  .final-reflection p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  .final-reflection p + p {
+    margin-top: 1rem;
+  }
+
+  /* ── Item map ─────────────────────────────────────────── */
+  .item-map {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  @media (min-width: 520px) {
+    .item-map {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (min-width: 960px) {
+    .item-map {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .item-card {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 0.35rem;
+    padding: 1rem 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: all 0.2s ease;
+    min-height: 120px;
+  }
+  .item-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-border);
+    background: var(--surface-hi);
+  }
+  .item-num {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .item-title {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .item-src {
+    font-size: 0.78rem;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .item-status {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .item-todo .item-status {
+    color: var(--amber);
+  }
+  .item-todo {
+    border-style: dashed;
+    border-color: rgba(230, 197, 103, 0.25);
+  }
+
+  /* ── Misc ─────────────────────────────────────────────── */
+  :global(.portfolio-body a) {
+    color: var(--accent);
+  }
+  :global(.portfolio-body a:hover) {
+    color: #fff;
+  }
+  :global(.portfolio-body code) {
+    padding: 0.12rem 0.4rem;
+    background: rgba(142, 224, 180, 0.1);
+    border-radius: 4px;
+    font-size: 0.88em;
+    color: var(--accent);
+  }
+</style>
+
+<script>
+  (() => {
+    const layout = document.querySelector<HTMLElement>('.layout');
+    const toc = document.querySelector<HTMLElement>('.toc-inner');
+    if (!layout || !toc) return;
+
+    const updateTocPosition = () => {
+      const shouldFix = window.matchMedia('(min-width: 960px)').matches
+        && window.scrollY >= layout.offsetTop - 24;
+      toc.classList.toggle('is-fixed', shouldFix);
+    };
+
+    updateTocPosition();
+    window.addEventListener('scroll', updateTocPosition, { passive: true });
+    window.addEventListener('resize', updateTocPosition);
+  })();
+
+  document.querySelectorAll<HTMLElement>('[data-carousel]').forEach((carousel) => {
+    const track = carousel.querySelector<HTMLElement>('[data-carousel-track]');
+    const prev = carousel.querySelector<HTMLButtonElement>('[data-carousel-prev]');
+    const next = carousel.querySelector<HTMLButtonElement>('[data-carousel-next]');
+    if (!track || !prev || !next) return;
+
+    const updateButtons = () => {
+      const max = track.scrollWidth - track.clientWidth - 1;
+      prev.disabled = track.scrollLeft <= 0;
+      next.disabled = track.scrollLeft >= max;
+    };
+
+    const step = () => {
+      const card = track.querySelector<HTMLElement>('.award-card');
+      const gap = parseFloat(getComputedStyle(track).columnGap || '16');
+      const cardWidth = card ? card.getBoundingClientRect().width : 280;
+      const visibleCards = Math.max(1, Math.floor(track.clientWidth / (cardWidth + gap)));
+      return (cardWidth + gap) * visibleCards;
+    };
+
+    prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+    track.addEventListener('scroll', updateButtons, { passive: true });
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
+  });
+
+  (() => {
+    const lightbox = document.querySelector<HTMLElement>('[data-lightbox]');
+    if (!lightbox) return;
+    const img = lightbox.querySelector<HTMLImageElement>('[data-lightbox-img]');
+    const titleEl = lightbox.querySelector<HTMLElement>('[data-lightbox-title]');
+    const detailEl = lightbox.querySelector<HTMLElement>('[data-lightbox-detail]');
+    const counterEl = lightbox.querySelector<HTMLElement>('[data-lightbox-counter]');
+    const closeBtn = lightbox.querySelector<HTMLButtonElement>('[data-lightbox-close]');
+    const prevBtn = lightbox.querySelector<HTMLButtonElement>('[data-lightbox-prev]');
+    const nextBtn = lightbox.querySelector<HTMLButtonElement>('[data-lightbox-next]');
+    const triggers = Array.from(document.querySelectorAll<HTMLAnchorElement>('[data-lightbox-trigger]'));
+    if (!img || !titleEl || !detailEl || !counterEl || !closeBtn || !prevBtn || !nextBtn || triggers.length === 0) return;
+
+    let currentIndex = 0;
+    let lastFocused: HTMLElement | null = null;
+
+    const show = (idx: number) => {
+      const total = triggers.length;
+      currentIndex = ((idx % total) + total) % total;
+      const t = triggers[currentIndex];
+      img.src = t.dataset.full || '';
+      img.alt = `${t.dataset.title || ''} certificate`;
+      titleEl.textContent = t.dataset.title || '';
+      detailEl.textContent = t.dataset.detail || '';
+      counterEl.textContent = `${currentIndex + 1} / ${total}`;
+    };
+
+    const open = (idx: number, fromEl: HTMLElement) => {
+      lastFocused = fromEl;
+      show(idx);
+      lightbox.hidden = false;
+      document.body.classList.add('lightbox-open');
+      requestAnimationFrame(() => lightbox.classList.add('is-open'));
+      closeBtn.focus();
+    };
+
+    const close = () => {
+      lightbox.classList.remove('is-open');
+      document.body.classList.remove('lightbox-open');
+      const onEnd = () => {
+        lightbox.hidden = true;
+        lightbox.removeEventListener('transitionend', onEnd);
+      };
+      lightbox.addEventListener('transitionend', onEnd);
+      lastFocused?.focus();
+    };
+
+    triggers.forEach((trigger, i) => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        open(i, trigger);
+      });
+    });
+
+    closeBtn.addEventListener('click', close);
+    prevBtn.addEventListener('click', () => show(currentIndex - 1));
+    nextBtn.addEventListener('click', () => show(currentIndex + 1));
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') show(currentIndex - 1);
+      else if (e.key === 'ArrowRight') show(currentIndex + 1);
+    });
+  })();
+</script>
