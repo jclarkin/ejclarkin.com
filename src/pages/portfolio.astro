@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const docs = {
   coverLetter: {
     title: 'Cover Letter - NAC Orchestra',
-    tag: 'Portfolio Item #7 · Lesson 17',
+    tag: 'Sample cover letter',
     href: '/portfolio/cover-letter-nac-orchestra.pdf',
     thumb: '/portfolio/thumbs/cover-letter-nac-orchestra.jpg',
     size: '33 KB',
@@ -13,7 +13,7 @@ const docs = {
   },
   resume: {
     title: 'Clarinet Résumé',
-    tag: 'Portfolio Item #6 · Lesson 17',
+    tag: 'Sample résumé',
     href: '/portfolio/evelyn-jade-clarkin-clarinet-resume.pdf',
     thumb: '/portfolio/thumbs/evelyn-jade-clarkin-clarinet-resume.jpg',
     size: '261 KB',
@@ -22,16 +22,16 @@ const docs = {
   },
   destination: {
     title: 'Becoming a Section Clarinetist - NAC Orchestra',
-    tag: 'Portfolio Item #4 · Lesson 16',
+    tag: 'Career research',
     href: '/portfolio/destination-profile-section-clarinetist.pdf',
     thumb: '/portfolio/thumbs/destination-profile-section-clarinetist.jpg',
     size: '4.3 MB',
     description:
-      'Destination Profile research presentation. Answers five of the nine assignment prompts (skills, education, LMI, trends, related jobs) with MLA-cited sources and a supporting graphic.',
+      'Research into orchestral performance: the skills, education, working conditions, and career paths of a section clarinetist.',
   },
   occupationMatching: {
     title: 'Essential Skills Occupation Matching Report',
-    tag: 'Careers Section · Lesson 12',
+    tag: 'Career exploration',
     href: '/portfolio/occupation-matching-report.pdf',
     thumb: '/portfolio/thumbs/occupation-matching-report.jpg',
     size: '108 KB',
@@ -40,7 +40,7 @@ const docs = {
   },
   teamwork: {
     title: 'Teamwork Self-Assessment & Improvement Plan',
-    tag: 'Portfolio Item #3 · Lesson 7',
+    tag: 'Personal development',
     href: '/portfolio/teamwork-questionnaire.pdf',
     thumb: '/portfolio/thumbs/teamwork-questionnaire.jpg',
     size: '520 KB',
@@ -101,15 +101,15 @@ const awardsGallery = [
 ];
 
 const timeline = [
-  { when: 'Now', what: 'Russell Public HS', detail: 'Grade 12, band & community band', state: 'current' },
-  { when: 'June 2026', what: 'OSSD', detail: 'Ontario Secondary School Diploma', state: 'upcoming' },
-  { when: '2026–2030', what: 'Carleton University', detail: 'Bachelor of Music · Entrance Scholarship', state: 'upcoming' },
-  { when: '2030 →', what: 'Audition Track', detail: 'Post-grad professional ensemble auditions', state: 'future' },
+  { when: 'Completed', what: 'Russell High School', detail: 'School band and community performances', state: 'past' },
+  { when: '2026', what: 'High school graduation', detail: 'Completed secondary school', state: 'past' },
+  { when: 'Now', what: 'Carleton University', detail: 'Music studies', state: 'current' },
+  { when: 'Looking ahead', what: 'Performance opportunities', detail: 'Develop ensemble experience and prepare for auditions', state: 'future' },
   { when: 'Goal', what: 'NAC Orchestra', detail: 'Section Clarinetist', state: 'goal' },
 ];
 
 const performanceStats = [
-  { value: '12', label: 'documented performances' },
+  { value: '12', label: 'listed engagements' },
   { value: '4', label: 'performance settings' },
   { value: '2022–2026', label: 'years represented' },
 ];
@@ -120,7 +120,7 @@ const performanceGroups = [
     short: 'RCCB',
     events: [
       { date: 'Mar. 19, 2026', title: 'Catch the Ace performance' },
-      { date: 'May 14, 2026', title: 'RCCB performance', status: 'Upcoming' },
+      { date: 'May 14, 2026', title: 'RCCB performance', status: 'Scheduled in 2026' },
     ],
   },
   {
@@ -131,7 +131,7 @@ const performanceGroups = [
       { date: 'June 2024', title: 'RHS band performance' },
       { date: 'Dec. 2024', title: 'RHS band performance' },
       { date: 'Dec. 2025', title: 'RHS band performance' },
-      { date: 'May 2026', title: 'Music Festival performance', status: 'Upcoming' },
+      { date: 'May 2026', title: 'Music Festival performance', status: 'Scheduled in 2026' },
     ],
   },
   {
@@ -153,33 +153,22 @@ const performanceGroups = [
   },
 ];
 
-const itemMap = [
-  { n: 1, title: 'Skills & Work Samples (revised)', src: 'Lesson 5', where: '/skills-work-samples/', status: 'done' },
-  { n: 2, title: 'Personal Profile', src: 'Lesson 5', where: '/about/', status: 'done' },
-  { n: 3, title: 'Teamwork Skills Summative', src: 'Lesson 7', where: '#skills', status: 'done' },
-  { n: 4, title: 'Destination Profile', src: 'Lesson 16', where: '#careers', status: 'done' },
-  { n: 5, title: 'Job Ad (target)', src: 'Lesson 17', where: '#resume', status: 'done' },
-  { n: 6, title: 'Tailored Résumé', src: 'Lesson 17', where: '#resume', status: 'done' },
-  { n: 7, title: 'Cover Letter', src: 'Lesson 17', where: '#resume', status: 'done' },
-  { n: 8, title: 'Music Performances (Teamwork)', src: 'External · Item C', where: '#skills', status: 'done' },
-  { n: 9, title: 'Awards & Recognition (Employability)', src: 'External · Item D', where: '#skills', status: 'done' },
-];
 ---
 
-<BaseLayout title="Career Portfolio - Evelyn-Jade Clarkin">
+<BaseLayout title="Music Portfolio - Evelyn-Jade Clarkin">
   <a href="/" class="home-link">← Back to Home</a>
 
   <section class="hero">
     <div class="hero-text">
-      <div class="eyebrow">Designing Your Future (GWL3O) · Lesson 20 Culminating Task</div>
-      <h1>Career Portfolio</h1>
+      <div class="eyebrow">Clarinet · Music · Community</div>
+      <h1>Music Portfolio</h1>
       <p class="lede">
-        A living collection of evidence that shows who I am as a worker and where I am headed. It pulls together the seven mandatory items from this course plus additional documents that demonstrate I am a strong fit for my chosen career as a professional clarinetist.
+        My experience in clarinet performance, community ensembles, teaching, and creative work. I am developing my musicianship and exploring a future in professional music.
       </p>
       <div class="destination-card">
-        <div class="destination-label">Target career destination</div>
+        <div class="destination-label">Long-term aspiration</div>
         <div class="destination-main">Section Clarinetist · NAC Orchestra</div>
-        <div class="destination-sub">via Bachelor of Music, Carleton University (2026–2030)</div>
+        <div class="destination-sub">Studying music at Carleton University</div>
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -241,19 +230,18 @@ const itemMap = [
           <li><a href="#resume"><span class="toc-num">01</span><span>Résumé</span></a></li>
           <li><a href="#skills"><span class="toc-num">02</span><span>Skills</span></a></li>
           <li><a href="#careers"><span class="toc-num">03</span><span>Careers</span></a></li>
-          <li><a href="#reflection"><span class="toc-num">04</span><span>Reflection</span></a></li>
-          <li><a href="#item-map"><span class="toc-num">05</span><span>Item Map</span></a></li>
+          <li><a href="#reflection"><span class="toc-num">04</span><span>Approach</span></a></li>
         </ol>
       </div>
     </aside>
 
-    <main class="portfolio-body">
+    <div class="portfolio-body">
       <section id="resume" class="section">
         <header class="section-header">
           <div class="section-num-lg">01</div>
           <div>
-            <h2>Résumé Section</h2>
-            <p class="section-sub">Tailored specifically to the NAC Orchestra Section Clarinetist audition posting.</p>
+            <h2>Résumé & Application Samples</h2>
+            <p class="section-sub">Earlier application samples written for a section clarinetist role with the NAC Orchestra.</p>
           </div>
         </header>
 
@@ -292,14 +280,13 @@ const itemMap = [
         <header class="section-header">
           <div class="section-num-lg">02</div>
           <div>
-            <h2>Skills Section</h2>
-            <p class="section-sub">Four documents proving the skills employers care about. Per the course rule, at least one comes from outside this course.</p>
+            <h2>Experience & Skills</h2>
+            <p class="section-sub">Performance history, research, and recognition from music, school, and community life.</p>
           </div>
         </header>
 
         <div class="skill-card">
           <div class="skill-head">
-            <span class="chip chip-done">Ready</span>
             <span class="skill-kind">Essential Learning Skills</span>
           </div>
           <div class="doc-card">
@@ -308,7 +295,7 @@ const itemMap = [
             </a>
             <div class="doc-body">
               <div class="doc-tag">{docs.destination.tag}</div>
-              <h3>Destination Profile - Becoming a Section Clarinetist</h3>
+              <h3>Becoming a Section Clarinetist</h3>
               <p>{docs.destination.description}</p>
               <a class="btn" href={docs.destination.href}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
@@ -317,14 +304,13 @@ const itemMap = [
             </div>
           </div>
           <blockquote class="reflection">
-            <span class="reflection-label">What this proves</span>
-            I chose to include my career research presentation because it shows my learning skills and how I can find and organize information about a job I'm interested in. It's also a good example of communication since I had to present that info so it made sense to other people. This kind of focus and being able to stick to a plan are employability skills that I use to get my work done.
+            <span class="reflection-label">What I learned</span>
+            Researching orchestral careers helped me practise finding reliable information, organizing it clearly, and connecting a long-term goal to practical steps.
           </blockquote>
         </div>
 
         <div class="skill-card">
           <div class="skill-head">
-            <span class="chip chip-done">Ready</span>
             <span class="skill-kind">Communication Skills</span>
           </div>
           <div class="doc-card">
@@ -334,7 +320,7 @@ const itemMap = [
             <div class="doc-body">
               <div class="doc-tag">{docs.teamwork.tag}</div>
               <h3>{docs.teamwork.title}</h3>
-              <p>40-question self-assessment identifying my primary roles (Thinker + Carer, Leader as backup) plus three skills to actively improve (<em>Use Numbers</em>, <em>Communicate</em>, <em>Work With Others</em>), each paired with a concrete method. A short summary also lives on the <a href="/skills-work-samples/">Skills & Work Samples</a> page.</p>
+              <p>40-question self-assessment identifying my primary roles (Thinker + Carer, Leader as backup) plus three skills to actively improve (<em>Use Numbers</em>, <em>Communicate</em>, <em>Work With Others</em>), each paired with a concrete method.</p>
               <a class="btn" href={docs.teamwork.href}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
                 View PDF · {docs.teamwork.size}
@@ -342,16 +328,14 @@ const itemMap = [
             </div>
           </div>
           <blockquote class="reflection">
-            <span class="reflection-label">What this proves</span>
-            I have chosen to include my teamwork style questionnaire because it demonstrates my communication skills, specifically my ability to listen before contributing to a group. My results identified me as a mix of a Thinker and Carer, which shows that I communicate by weighing alternatives and ensuring everyone in the group feels heard. Instead of just pushing my own opinions, I focus on fostering good working relationships and improving upon the ideas of others. These skills in active listening and conflict resolution are essential employability traits that allow me to communicate effectively and keep a team working harmoniously toward a common goal.
+            <span class="reflection-label">What I learned</span>
+            I listen carefully and consider different ideas before contributing. I am working on speaking up with more confidence while helping everyone in a group feel heard.
           </blockquote>
         </div>
 
         <div class="skill-card">
           <div class="skill-head">
-            <span class="chip chip-done">Ready</span>
             <span class="skill-kind">Teamwork Skills</span>
-            <span class="chip chip-outside">Outside-of-course</span>
           </div>
           <div class="performance-infographic" aria-label="Music performance history infographic">
             <div class="performance-intro">
@@ -397,20 +381,18 @@ const itemMap = [
             </div>
           </div>
           <blockquote class="reflection">
-            <span class="reflection-label">What this proves</span>
-            I chose to include my history of band performances because it is a good example of my teamwork skills and how I can contribute to a group goal. Playing in both school and community band has taught me how to collaborate with all kinds of people, where everyone has to listen to each other and stay in sync to sound good. This experience shows that I am accountable and reliable because if I don't know my part, it affects the whole section and the overall sound of the music. Being able to follow a conductor's lead and support the other musicians are important skills that I use when I need to work effectively as part of a team.
+            <span class="reflection-label">What I learned</span>
+            Band performances have taught me to prepare my part, follow a conductor, and stay aware of the musicians around me. Each player contributes to the sound of the whole ensemble.
           </blockquote>
         </div>
 
         <div class="skill-card">
           <div class="skill-head">
-            <span class="chip chip-done">Ready</span>
             <span class="skill-kind">Employability Skills</span>
-            <span class="chip chip-outside">Outside-of-course</span>
           </div>
           <div class="award-intro">
             <h3>Awards & Recognition</h3>
-            <p>A chronological gallery of awards earned outside of this course — evidence of dependability, initiative, and sustained effort across academics, the arts, and music. Click any certificate to view it full-size.</p>
+            <p>Recognition for sustained effort across music, academics, and the arts. Select a certificate to view it full-size.</p>
           </div>
           <div class="award-carousel" data-carousel>
             <button type="button" class="carousel-btn carousel-prev" data-carousel-prev aria-label="Previous award" disabled>
@@ -444,8 +426,8 @@ const itemMap = [
             </button>
           </div>
           <blockquote class="reflection">
-            <span class="reflection-label">What this proves</span>
-            I included these awards from Russell High School because they show my commitment to excellence and my ability to succeed in many different areas. Winning awards for Language, Art, and "Conceptual Clarity" demonstrates that I have strong communication and creative skills, while my "Most Effort" award proves that I'm a hard worker who stays dedicated to a project until it's finished. My more recent awards for the highest average in Grade 11 Math and Grade 12 Music show organization as I move into more advanced classes. These are all important employability skills because they prove that I can be counted on to do high-quality work and keep improving, no matter the task.
+            <span class="reflection-label">What I learned</span>
+            These awards reflect sustained effort in music, academics, and the arts. They remind me to keep practising, stay organized, and approach unfamiliar work with patience.
           </blockquote>
         </div>
       </section>
@@ -454,8 +436,8 @@ const itemMap = [
         <header class="section-header">
           <div class="section-num-lg">03</div>
           <div>
-            <h2>Careers Section</h2>
-            <p class="section-sub">Occupations of interest plus the education and training route from high school to the NAC Orchestra.</p>
+            <h2>Musical Direction</h2>
+            <p class="section-sub">My musical education, career interests, and longer-term performance goals.</p>
           </div>
         </header>
 
@@ -478,7 +460,7 @@ const itemMap = [
           </a>
           <div class="doc-body">
             <div class="doc-tag">{docs.occupationMatching.tag}</div>
-            <h3>A. Document Communicating Occupations of Interest</h3>
+            <h3>Exploring Careers in Music</h3>
             <p>{docs.occupationMatching.description}</p>
             <a class="btn" href={docs.occupationMatching.href}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
@@ -493,8 +475,8 @@ const itemMap = [
           </a>
           <div class="doc-body">
             <div class="doc-tag">{docs.destination.tag}</div>
-            <h3>B. Education / Training Plan to Meet Career Goals</h3>
-            <p>The same research presentation also serves as the formal Education and Training plan for this portfolio. A condensed, web-friendly version of the plan lives on the <a href="/about/">About Me</a> page.</p>
+            <h3>Education & Career Research</h3>
+            <p>Earlier research into the education and experience needed for orchestral performance. Read more about my current direction on the <a href="/career-planning/">Musical Goals</a> page.</p>
             <a class="btn" href={docs.destination.href}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
               View PDF · {docs.destination.size}
@@ -503,10 +485,10 @@ const itemMap = [
         </div>
 
         <div class="related-pages">
-          <h4>Related course pages</h4>
+          <h4>More about me</h4>
           <ul>
-            <li><a href="/skills-work-samples/">Skills & Work Samples - Lesson 1 / Item #1 (revised)</a></li>
-            <li><a href="/about/">About Me / Personal Profile - Lesson 5 / Item #2</a></li>
+            <li><a href="/skills-work-samples/">Skills & Work Samples</a></li>
+            <li><a href="/about/">About Me</a></li>
           </ul>
         </div>
       </section>
@@ -515,38 +497,18 @@ const itemMap = [
         <header class="section-header">
           <div class="section-num-lg">04</div>
           <div>
-            <h2>Reflection</h2>
-            <p class="section-sub">A final reflection on what this portfolio proves and how the course changed my understanding of my skills.</p>
+            <h2>How I Work</h2>
+            <p class="section-sub">Listening carefully, preparing consistently, and learning through collaboration.</p>
           </div>
         </header>
 
         <div class="final-reflection">
-          <p>Building my portfolio taught me that many different experiences contribute to my skills, even if it isn't obvious at first. For example, I used to think I was bad at communication because I can be quite shy, but I realized that I don't have to be an extrovert to be good at communication; as long as I put in the effort to understand a concept and can share it clearly with others, I am using communication skills. This experience also made me aware of how many steps are actually required to get a job and just how many different types of skills exist in the workforce. I used to think I lacked a lot of necessary traits, but now I realize I have more skills than I thought, and improving on my weaker areas isn't impossible. It has showed me that I don't have to be perfect at everything immediately, as long as I am willing to put in the effort to get better.</p>
-          <p>My portfolio communicates three important things about me: that I am a hard worker who persists even when things are difficult, that I am a good listener who can collaborate to achieve a common goal, and that I am always willing to learn because I truly care about my work. The best part of my portfolio is how my prior achievements prove I have real experience working with others in a team. However, one area that could use improvement is my leadership, as I tend to be more comfortable working on the sidelines. While I know being a supportive team member is a skill of its own, I want to get better at taking charge when the situation requires it.</p>
+          <p>I prepare carefully, listen before contributing, and work steadily toward a shared goal. Ensemble playing has taught me that knowing my own part matters just as much as listening to the musicians around me.</p>
+          <p>I am continuing to build confidence in speaking up and taking the lead. Music, teaching, and collaborative projects give me opportunities to practise both.</p>
         </div>
       </section>
 
-      <section id="item-map" class="section">
-        <header class="section-header">
-          <div class="section-num-lg">05</div>
-          <div>
-            <h2>Portfolio Item Map</h2>
-            <p class="section-sub">Lesson 20 checklist - every required item and where it lives.</p>
-          </div>
-        </header>
-
-        <div class="item-map">
-          {itemMap.map((item) => (
-            <a href={item.where} class={`item-card item-${item.status}`}>
-              <div class="item-num">#{item.n}</div>
-              <div class="item-title">{item.title}</div>
-              <div class="item-src">{item.src}</div>
-              <div class="item-status">{item.status === 'done' ? '✓ Placed' : '⋯ To add'}</div>
-            </a>
-          ))}
-        </div>
-      </section>
-    </main>
+    </div>
   </div>
 
   <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
@@ -1624,71 +1586,6 @@ const itemMap = [
   }
   .final-reflection p + p {
     margin-top: 1rem;
-  }
-
-  /* ── Item map ─────────────────────────────────────────── */
-  .item-map {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
-  }
-  @media (min-width: 520px) {
-    .item-map {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  @media (min-width: 960px) {
-    .item-map {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  .item-card {
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    gap: 0.35rem;
-    padding: 1rem 1.1rem;
-    background: var(--surface);
-    border: 1px solid var(--surface-border);
-    border-radius: 12px;
-    text-decoration: none;
-    color: var(--ink);
-    transition: all 0.2s ease;
-    min-height: 120px;
-  }
-  .item-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--accent-border);
-    background: var(--surface-hi);
-  }
-  .item-num {
-    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
-    font-size: 0.8rem;
-    color: var(--accent);
-    font-weight: 600;
-  }
-  .item-title {
-    font-size: 0.98rem;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.3;
-  }
-  .item-src {
-    font-size: 0.78rem;
-    color: var(--ink-mute);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-  .item-status {
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--accent);
-  }
-  .item-todo .item-status {
-    color: var(--amber);
-  }
-  .item-todo {
-    border-style: dashed;
-    border-color: rgba(230, 197, 103, 0.25);
   }
 
   /* ── Misc ─────────────────────────────────────────────── */

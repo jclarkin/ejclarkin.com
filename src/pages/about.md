@@ -5,68 +5,24 @@ title: About Me
 
 # About Me
 
-*Portfolio Item #2 (Assignment 2 – Personal Profile)*
+I am Evelyn-Jade Clarkin, a clarinetist and music student at Carleton University. After completing high school in 2026, I am continuing to develop my musicianship and explore a future in music.
 
-I am a university-bound student with the goal of pursuing a career in music. I demonstrate dependability, attentiveness, and perseverance in both individual and collaborative academic and musical settings. I am committed to continuous self-improvement, particularly in the area of verbal communication, and I actively challenge myself by participating in my community band, where clear coordination and professionalism are essential. Through these experiences, I continue to develop confidence in contributing within structured group environments. I value honesty and strive to approach my work with integrity, discipline, and a strong sense of responsibility.
+## Music & Community
 
-## Skills
+My experience includes school and community band performances, parades, and Remembrance Day ceremonies. Playing in an ensemble has taught me to prepare consistently, follow a conductor, and listen closely to the people around me.
 
-- Dependability
-- Attentiveness
-- Perseverance
-- Clear coordination
-- Professionalism
+## Beyond Performance
 
-## Interests
+I have also worked with children as a horseback riding camp counselor and tutor, and collaborated on a school art-room mural. These experiences have helped me develop patience, clear communication, and confidence in supporting others.
 
-- Music
-- Community band participation
-- Academic and musical collaboration
+Read more about my [skills and work samples](/skills-work-samples/).
 
-## Learning Style
+## My Approach
 
-I like to learn verbally in a structured setting.
+I value honesty, reliability, and steady improvement. I work well in structured settings and enjoy projects where everyone contributes to a shared result. I am continuing to build confidence in verbal communication and leadership.
 
-## Values
+## Looking Ahead
 
-- Honesty
-- Integrity
-- Discipline
-- Responsibility
+I am interested in professional ensemble performance, including orchestral clarinet. My focus is on building the musical skills and experience to explore that path.
 
-## Dream Career
-
-Pursuing a career in music.
-
-### Skills To Acquire
-
-- Verbal communication (area of focus for continuous self-improvement)
-
-## Strengths
-
-- Dependability in both individual and collaborative settings
-- Attentiveness to detail
-- Perseverance in academic and musical pursuits
-- Commitment to continuous self-improvement
-- Clear coordination and professionalism in group environments
-- Confidence in contributing within structured group environments
-
-## Areas of Growth
-
-- Verbal communication (actively working on improvement)
-
-## Growth Opportunities
-
-- I am committed to dedicating at least 1 hour per week to my learning and skill development.
-- Community band participation (provides opportunities to practice clear coordination and professionalism)
-- University education (upcoming opportunity for further development)
-- Structured group environments (continuing to build confidence and skills)
-
-## Timeline & Learning Plan
-
-| Milestone | Skills & Outcomes |
-|:----------|:-------------------|
-| **Community band** (now) | More music practice; improved verbal communication through coordination and collaboration |
-| **High school diploma** (Spring 2026) | Diploma; organizational skills developed through coursework and deadlines |
-| **Carleton University** (Fall 2026 – 2030) | Bachelor's degree; exposure to professional settings; connections for future work opportunities |
-| **2030 onward** | Pursue full-time self-employment in music field |
+Explore my [music portfolio](/portfolio/) or [musical goals](/career-planning/).
