@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/MarkdownLayout.astro
 title: About Me
+description: "Meet Evelyn-Jade Clarkin, a clarinetist and Carleton University music student with experience in community ensembles, teaching, and creative collaboration."
 ---
 
 # About Me

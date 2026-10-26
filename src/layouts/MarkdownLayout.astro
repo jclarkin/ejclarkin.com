@@ -4,7 +4,10 @@ import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout title={frontmatter.title || "Evelyn-Jade Clarkin"}>
+<BaseLayout
+  title={frontmatter.title ? `${frontmatter.title} - Evelyn-Jade Clarkin` : "Evelyn-Jade Clarkin"}
+  description={frontmatter.description}
+>
   <nav class="back-nav">
     <a href="/">← Back to Home</a>
   </nav>

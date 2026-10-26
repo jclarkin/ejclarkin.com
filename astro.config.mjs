@@ -23,6 +23,7 @@ function rehypeOpenInNewTab() {
 export default defineConfig({
   site: 'https://ejclarkin.com',
   output: 'static',
+  trailingSlash: 'always',
   integrations: [
     sitemap()
   ],

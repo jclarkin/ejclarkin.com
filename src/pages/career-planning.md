@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/MarkdownLayout.astro
 title: Musical Goals
+description: "Evelyn-Jade Clarkin’s musical goals, from developing clarinet technique and ensemble skills to exploring a future in professional performance."
 ---
 
 # Musical Goals

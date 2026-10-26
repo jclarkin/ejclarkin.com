@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/MarkdownLayout.astro
 title: Skills & Work Samples
+description: "Evelyn-Jade Clarkin’s experience in tutoring, horseback riding camp leadership, and collaborative art, with a focus on communication and teamwork."
 ---
 
 # Skills & Work Samples

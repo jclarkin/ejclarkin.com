@@ -1,9 +1,15 @@
 ---
 export interface Props {
   title?: string;
+  description?: string;
 }
 
-const { title = "E Clarkin" } = Astro.props;
+const {
+  title = "Evelyn-Jade Clarkin",
+  description = "Evelyn-Jade Clarkin’s music portfolio: clarinet performance, community ensembles, creative work, and music studies at Carleton University.",
+} = Astro.props;
+const canonicalPath = Astro.url.pathname.replace(/\/+$/, '') + '/';
+const canonicalURL = new URL(canonicalPath, Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -15,6 +21,14 @@ const { title = "E Clarkin" } = Astro.props;
     <link rel="apple-touch-icon" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL.href} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Evelyn-Jade Clarkin" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta name="twitter:card" content="summary" />
   </head>
   <body>
     <main class="main-content">
